@@ -1,0 +1,5 @@
+require "frozen_eyrie/version"
+
+module FrozenEyrie
+  # Your code goes here...
+end
