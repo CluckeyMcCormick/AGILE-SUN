@@ -1,0 +1,4 @@
+Problem: We are working on the classic project.
+Solution: Finish classic project.
+Problem: We don't know what language this AGILE project is in
+Solution: To be determined, pick one/ask professor.
