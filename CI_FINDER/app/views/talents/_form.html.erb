@@ -1,0 +1,19 @@
+<%= simple_form_for(@talent) do |f| %>
+  <% if @talent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@talent.errors.count, "error") %> prohibited this talent from being saved:</h2>
+
+      <ul>
+      <% @talent.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.input :name %>
+  <%= f.input :talent_type, as: :radio_buttons, collection: Talent.talent_types.keys.to_a %>
+  <%= f.association :users %>
+
+  <%= f.button :submit %>
+<% end %>
