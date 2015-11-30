@@ -1,19 +1,55 @@
-<p id="notice"><%= notice %></p>
+<html lang="en">
+  <body>
+    <!-- This is the code for the navigation bar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">SCRUM Project</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li class="active">
+              <a href="/users">Browse Users</a>
+            </li>
+            <li><a href="/talents">Browse Talents</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+    <br><br><br>
 
-<p>
-  <strong>Password:</strong>
-  <%= @user.password %>
-</p>
+		<p id="notice"><%= notice %></p>
 
-<p>
-	<b>What talents?</b>
-	<%= @user.talents.map {|x| x.to_label}.join ', ' %>
-</p>
+		<p>
+  		<strong>Name:</strong>
+  		<%= @user.name %>
+		</p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+		<p>
+		  <strong>Password:</strong>
+		  <%= @user.password %>
+		</p>
+
+		<p>
+			<b>What talents?</b>
+			<%= @user.talents.map {|x| x.to_label}.join ', ' %>
+		</p>
+
+		<%= link_to 'Edit', edit_user_path(@user) %> |
+		<%= link_to 'Back', users_path %>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>  
+  </body>
+</html>
