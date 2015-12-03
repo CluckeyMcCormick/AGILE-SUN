@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
-  resourses  :dashboard
+  devise_for :user
   get 'welcome/index'
 
+  resources :dashboard
   resources :users
   resources :talents
   # The priority is based upon order of creation: first created -> highest priority.
