@@ -14,8 +14,8 @@
 		</p>
 
 		<p>
-		  <strong>Password:</strong>
-		  <%= @user.password %>
+		  <strong>Email:</strong>
+		  <%= @user.email%>
 		</p>
 
 		<p>
@@ -23,7 +23,6 @@
 			<%= @user.talents.map {|x| x.to_label}.join ', ' %>
 		</p>
 
-		<%= link_to 'Edit', edit_user_path(@user) %> |
 		<%= link_to 'Back', users_path %>
 
     <!-- Bootstrap core JavaScript
