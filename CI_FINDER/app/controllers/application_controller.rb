@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
   #This allows us to have the "name" field at user creation
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) << :name
+    devise_parameter_sanitizer.for(:account_update) << :name
   end
 
 end

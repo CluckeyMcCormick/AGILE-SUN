@@ -70,6 +70,6 @@ class TalentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def talent_params
-      params.require(:talent).permit(:name, :talent_type, :user_ids => [])
+      params.require(:talent).permit(:name, :talent_type)
     end
 end

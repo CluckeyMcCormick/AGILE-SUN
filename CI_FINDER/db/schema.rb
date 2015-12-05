@@ -11,18 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151202220734) do
+ActiveRecord::Schema.define(version: 20151205070933) do
+
+  create_table "rated_talents", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "talent_id"
+    t.integer  "rating_value"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "rated_talents", ["user_id", "talent_id"], name: "index_rated_talents_on_user_id_and_talent_id"
 
   create_table "talents", force: :cascade do |t|
     t.string   "name"
     t.integer  "talent_type"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-  end
-
-  create_table "talents_users", force: :cascade do |t|
-    t.integer "talent_id"
-    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|

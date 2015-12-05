@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :rated_talents
   devise_for :user
   get 'welcome/index'
 

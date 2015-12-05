@@ -13,7 +13,6 @@
 
   <%= f.input :name %>
   <%= f.input :talent_type, as: :radio_buttons, collection: Talent.talent_types.keys.to_a %>
-  <%= f.association :users %>
 
   <%= f.button :submit %>
 <% end %>

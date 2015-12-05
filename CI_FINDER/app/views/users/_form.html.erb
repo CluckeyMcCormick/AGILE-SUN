@@ -1,3 +1,4 @@
+<p>If you only see an update button, you may want to restart your browser.</p>
 <%= simple_form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -10,7 +11,9 @@
       </ul>
     </div>
   <% end %>
-  <%= f.association :talents %>
 
+  <!-- This is very important, apparently. -->
+  <%= f.hidden_field :name, :value => @user.name %>
+  
   <%= f.button :submit %>
 <% end %>
