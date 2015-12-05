@@ -1,5 +1,6 @@
 class TalentsController < ApplicationController
   before_action :set_talent, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :except => [:show, :index]
 
   # GET /talents
   # GET /talents.json

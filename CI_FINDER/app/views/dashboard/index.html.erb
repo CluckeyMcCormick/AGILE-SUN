@@ -1,2 +1,8 @@
 <%= render 'nbar' %>
-<h1>welcome to your dashboard</h1>
+<h1>Welcome to your dashboard!</h1>
+
+<%= link_to "Edit Your Talents", edit_user_path(current_user), :class => "btn" %>
+<br>
+<%= link_to "Update Account", edit_user_registration_path, :class => "btn" %>
+<br>
+<%= link_to "Delete Account", destroy_user_account_path(current_user), data: { confirm: "Are you sure?" }, method: :delete, :class => "btn" %>
