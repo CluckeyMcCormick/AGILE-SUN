@@ -1,4 +1,3 @@
-<p>If you only see an update button, you may want to restart your browser.</p>
 <%= simple_form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -21,7 +20,7 @@
 
   <%= link_to_add_association 'Add Talent', f, :rated_talents, 
     :'data-association-insertion-position' => 'before',
-    :'data-association-insertion-method' => 'append' %>
+    :'data-association-insertion-method' => 'append', :class => "btn btn-default"  %>
 
-  <%= f.button :submit %>
+  <%= f.button :submit, :class => "btn btn-default" %>
 <% end %>

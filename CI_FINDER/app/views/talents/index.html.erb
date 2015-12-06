@@ -6,7 +6,7 @@
     <!-- This is the code for the navigation bar -->
     <%= render 'nbar' %>
 
-    <div class="col-sm-6">
+    <div class="container">
       <!-- This is the code for the display table -->
       <h1>Listing Talents</h1>
       <table class="table">
@@ -32,7 +32,7 @@
       </table>
 
       <br>
-      <%= link_to 'New Talent', new_talent_path %>
+      <%= link_to 'New Talent', new_talent_path, :class => "btn btn-default" %>
     </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->

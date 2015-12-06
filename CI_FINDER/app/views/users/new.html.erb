@@ -3,12 +3,13 @@
   <body>
 
     <%= render 'nbar' %>
+    <div class="container">
+  		<h1>New User</h1>
 
-		<h1>New User</h1>
+  		<p class="lead">Creating new users in this way is unsupported. If you wish to create an account, please use our sign-in.</p>
 
-		<%= render 'form' %>
-
-		<%= link_to 'Back', users_path %>
+  		<%= link_to 'Back', users_path, :class => "btn btn-default" %>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

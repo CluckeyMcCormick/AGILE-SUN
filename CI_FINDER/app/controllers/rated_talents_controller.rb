@@ -1,5 +1,5 @@
 class RatedTalentsController < ApplicationController
-  before_action :set_rated_talent, only: [:show, :edit, :update, :destroy]
+  before_action :set_rated_talent, only: []
 
   # GET /rated_talents
   # GET /rated_talents.json

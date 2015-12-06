@@ -3,14 +3,14 @@
   <body>   
     <!-- This is the code for the navigation bar -->
     <%= render 'nbar' %>
+    <div class="container">
+  		<h1>Editing Talent</h1>
 
-		<h1>Editing Talent</h1>
+  		<%= render 'form' %>
 
-		<%= render 'form' %>
-
-		<%= link_to 'Show', @talent %>
-		<%= link_to 'Back', talents_path %>
-
+  		<%= link_to 'Show', @talent, :class => "btn btn-default" %>
+  		<%= link_to 'Back', talents_path, :class => "btn btn-default" %>
+    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

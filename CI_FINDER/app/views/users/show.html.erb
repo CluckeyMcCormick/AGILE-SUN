@@ -4,27 +4,26 @@
 
     <%= render 'nbar' %>
 
-    <br>
-
-		<p id="notice"><%= notice %></p>
+    <div class="container">
+		<h1>Viewing Profile</h1>
 
 		<p>
-  		<strong>Name:</strong>
-  		<%= @user.name %>
+			<strong>Name:</strong>
+			<%= @user.name %>
 		</p>
 
 		<p>
-		  <strong>Email:</strong>
-		  <%= @user.email%>
+		  	<strong>Email:</strong>
+		  	<%= @user.email%>
 		</p>
 
 		<p>
 			<b>What talents?</b>
-			<%= @user.rated_talents.map {|x| x.to_label_extended}.join ', ' %>
+			<%= @user.rated_talents.map {|x| x.to_label_talent}.join ', ' %>
 		</p>
 
-		<%= link_to 'Back', users_path %>
-
+		<%= link_to 'Back', users_path, :class => "btn btn-default"  %>
+	</div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

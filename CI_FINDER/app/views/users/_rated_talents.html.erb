@@ -1,6 +1,0 @@
-<div class='nested-fields'>
-    <%= f.hidden_field :user_id, :value => current_user.id %>
-    <%= f.input :talent_id, collection: Talent.all %>
-    <%= f.input :rating_value, as: :radio_buttons, collection: RatedTalent.rating_values.keys.to_a %>
-    <%= link_to_remove_association "Remove Talent", f %>
-</div>

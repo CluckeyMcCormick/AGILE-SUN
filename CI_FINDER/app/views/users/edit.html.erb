@@ -2,14 +2,15 @@
 <html lang="en">
   <body>
   	
-    <%= render 'nbar' %>
+    <%= render 'nbar_alt' %>
 
-		<h1>Add Some Talents</h1>
+    <div class="container">
+  		<h1>Add Some Talents</h1>
 
-		<%= render 'form' %>
+  		<%= render 'form' %>
 
-		<%= link_to 'Back', users_path %>
-
+  		<%= link_to "Back", dashboard_index_path, :class => "btn btn-default" %>
+    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

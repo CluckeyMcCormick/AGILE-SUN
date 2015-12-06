@@ -1,13 +1,13 @@
-<p id="notice"><%= notice %></p>
+<%= render 'nbar' %>
 
 <p>
   <strong>User:</strong>
-  <%= @rated_talent.user_id %>
+  <%= User.find(@rated_talent.user_id).name %>
 </p>
 
 <p>
   <strong>Talent:</strong>
-  <%= @rated_talent.talent_id %>
+  <%= Talent.find(@rated_talent.talent_id).name %>
 </p>
 
 <p>
@@ -15,5 +15,4 @@
   <%= @rated_talent.rating_value %>
 </p>
 
-<%= link_to 'Edit', edit_rated_talent_path(@rated_talent) %> |
 <%= link_to 'Back', rated_talents_path %>

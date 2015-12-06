@@ -4,23 +4,26 @@
   <body>
   	<!-- This is the code for the navigation bar -->
     <%= render 'nbar' %>
-    
-	<p>
-	  <strong>Name:</strong>
-	  <%= @talent.name %>
-	</p>
+    <div class="container">
+    	<h1>Viewing Talent</h1>
 
-	<p>
-	  <strong>Talent type:</strong>
-	  <%= @talent.talent_type %>
-	</p>
+		<p>
+		  <strong>Name:</strong>
+		  <%= @talent.name %>
+		</p>
 
-	<p>
-		<b>Who has this talent?</b>
-		<%= @talent.rated_talents.map {|x| x.to_label}.join ', ' %>
-	</p>
+		<p>
+		  <strong>Talent type:</strong>
+		  <%= @talent.talent_type %>
+		</p>
 
-	<%= link_to 'Edit', edit_talent_path(@talent) %> |
-	<%= link_to 'Back', talents_path %>
+		<p>
+			<b>Who has this talent?</b>
+			<%= @talent.rated_talents.map {|x| x.to_label_user}.join ', ' %>
+		</p>
+
+		<%= link_to 'Edit', edit_talent_path(@talent), :class => "btn btn-default" %>
+		<%= link_to 'Back', talents_path, :class => "btn btn-default" %>
+	</div>
   </body>
 </html>
