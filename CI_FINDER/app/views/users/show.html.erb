@@ -20,7 +20,7 @@
 
 		<p>
 			<b>What talents?</b>
-			<%= @user.rated_talents.map {|x| x.to_label}.join ', ' %>
+			<%= @user.rated_talents.map {|x| x.to_label_extended}.join ', ' %>
 		</p>
 
 		<%= link_to 'Back', users_path %>

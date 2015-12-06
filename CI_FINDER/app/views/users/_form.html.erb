@@ -14,6 +14,14 @@
 
   <!-- This is very important, apparently. -->
   <%= f.hidden_field :name, :value => @user.name %>
-  
+
+  <%= f.simple_fields_for :rated_talents do |rated_talent| %>
+    <%= render 'rated_talent_fields', :f => rated_talent %>
+  <% end %>
+
+  <%= link_to_add_association 'Add Talent', f, :rated_talents, 
+    :'data-association-insertion-position' => 'before',
+    :'data-association-insertion-method' => 'append' %>
+
   <%= f.button :submit %>
 <% end %>

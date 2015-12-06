@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
 	has_many :rated_talents
 
-	accepts_nested_attributes_for :rated_talents
+	accepts_nested_attributes_for :rated_talents, reject_if: :all_blank, allow_destroy: true
 
 	def to_label
     	"#{name}"

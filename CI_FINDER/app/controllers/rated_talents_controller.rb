@@ -69,6 +69,6 @@ class RatedTalentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rated_talent_params
-      params.require(:rated_talent).permit(:user_id, :talent_id, :rating_value)
+      params.require(:rated_talent).permit(:user_id, :talent_id, :rating_value, :_destroy, :id)
     end
 end
