@@ -9,7 +9,7 @@ echo "~~~~~~~ rails g simple_form:install --bootstrap"
 rails g simple_form:install --bootstrap
 echo "~~~~~~~ bundle install"
 bundle install
-echo "~~~~~~~ rake db:create"
-rake db:create
+echo "~~~~~~~ rake db:create:all"
+rake db:create:all
 echo "~~~~~~~ rake db:migrate"
 rake db:migrate
